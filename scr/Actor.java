@@ -1,8 +1,33 @@
 import java.util.ArrayList;
-
+import java.util.Objects;
 public class Actor extends Person {
-    public Actor (String name, String surname, int height) {
-        super(name, surname, height);
+    public int height;
+    public Actor (String name, String surname, Gender gender, int height) {
+        super(name, surname, gender);
+        this.height = height;
+    }
+
+    public void ActorAdd() {
+
+    }
+
+    @Override
+    public String toString() {
+        return name + ", " + surname + ", " + "(" + height + ")";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Actor)) return false;
+
+        Actor actor = (Actor) obj;
+        return height == actor.height && name.equals(actor.name) && surname.equals(actor.surname);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, surname, height);
     }
 
 }
