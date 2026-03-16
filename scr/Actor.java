@@ -19,8 +19,7 @@ public class Actor extends Person {
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
-        if (!(obj instanceof Actor)) return false;
-
+        if (obj == null || getClass() != obj.getClass()) return false; // можно оформить и так
         Actor actor = (Actor) obj;
         return height == actor.height && name.equals(actor.name) && surname.equals(actor.surname);
     }
