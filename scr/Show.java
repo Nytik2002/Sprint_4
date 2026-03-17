@@ -35,7 +35,7 @@ public class Show {
         for (int i = 0; i < listOfActors.size(); i++) {
             if(listOfActors.get(i).surname.equals(surname)) {
                 listOfActors.set(i, actor);
-                break;
+                return;
             }
         }
 
