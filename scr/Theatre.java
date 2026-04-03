@@ -11,7 +11,7 @@ public class Theatre {
     Opera opera = new Opera("Пусть Чайковского", 110, directorTwo, "Чайковский", "Либретто текст Опера", 5);
     Ballet ballet = new Ballet("Путь Достаевского", 70, directorOne, "Достаевский", "Либретто текст Балет", "Иван");
     //----------------------
-    show.addActor(actorOne);
+    show.addActor(actorOne); //22
     show.addActor(actorThree);
 
     opera.addActor(actorOne);
